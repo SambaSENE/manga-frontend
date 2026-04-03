@@ -48,7 +48,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /opt/manga-frontend
+            cd /var/www/html
             docker compose pull
             docker compose up -d
             docker image prune -f
