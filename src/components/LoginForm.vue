@@ -29,18 +29,18 @@ export default {
 </script>
 
 <template>
-    <form class="login-form" @submit.prevent="submitForm">
+    <form class="login-form" @submit.prevent="submitForm" novalidate>
         <div class="form-grid">
             <div class="field">
                 <label for="username">Nom d’utilisateur</label>
-                <input id="username" v-model="username" type="text" placeholder="Entrez votre nom d’utilisateur"
-                    autocomplete="username" required />
+                <input id="username" v-model="username" type="text" name="username"
+                    placeholder="Entrez votre nom d’utilisateur" autocomplete="username" required />
             </div>
 
             <div class="field">
                 <label for="password">Mot de passe</label>
-                <input id="password" v-model="password" type="password" placeholder="Entrez votre mot de passe"
-                    autocomplete="current-password" required />
+                <input id="password" v-model="password" type="password" name="password"
+                    placeholder="Entrez votre mot de passe" autocomplete="current-password" required />
             </div>
         </div>
 
